@@ -78,11 +78,6 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 PRODUCT_PACKAGES += \
-    omni_charger_res_images \
-    animation.txt \
-    font_charger.png
-
-PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
 # Bluetooth
@@ -138,7 +133,8 @@ PRODUCT_PACKAGES += \
     qti_telephony_hidl_wrapper.xml \
     qti-telephony-utils \
     qti_telephony_utils.xml \
-    tcmiface
+    tcmiface \
+    telephony-ext
 
 # Netutils
 PRODUCT_PACKAGES += \
@@ -146,7 +142,7 @@ PRODUCT_PACKAGES += \
     libandroid_net
 
 PRODUCT_PACKAGES += \
-    MotoActions
+    LineageActions
 
 PRODUCT_PACKAGES += \
     vndk_package
@@ -184,8 +180,7 @@ PRODUCT_PACKAGES += \
     RemovePackages
 
 PRODUCT_PACKAGES += \
-    MotoRav \
-    MotoSofia
+    MotoRav
 
 PRODUCT_BOOT_JARS += \
     android.hidl.manager-V1.0-java \

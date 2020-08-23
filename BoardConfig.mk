@@ -112,7 +112,7 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
-include vendor/omni/sepolicy/sepolicy.mk
+# SEPolicy
 include device/qcom/sepolicy/SEPolicy.mk
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
@@ -150,8 +150,14 @@ PRODUCT_SEPOLICY_SPLIT := true
 # Android generic system image always create metadata partition
 BOARD_USES_METADATA_PARTITION := true
 
+# Hacks
 BUILD_BROKEN_DUP_RULES := true
 
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 USE_XML_AUDIO_POLICY_CONF := 1
 
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+TARGET_USE_QTI_BT_STACK := true
+QCOM_BT_USE_BTNV := true
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true

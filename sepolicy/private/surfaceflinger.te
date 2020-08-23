@@ -1,2 +1,0 @@
-allow surfaceflinger firmware_file:file { open read };
-get_prop(surfaceflinger, firmware_file);
