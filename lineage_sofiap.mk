@@ -58,25 +58,25 @@ BOARD_USES_RECOVERY_AS_BOOT := false
 # must be before including Lineage part
 AB_OTA_UPDATER := true
 
-DEVICE_PACKAGE_OVERLAYS += device/motorola/sofiar/overlay/device
+DEVICE_PACKAGE_OVERLAYS += device/motorola/sofiap/overlay/device
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/motorola/sofiar/device.mk)
+$(call inherit-product, device/motorola/sofiap/device.mk)
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := lineage_sofiar
-PRODUCT_DEVICE := sofiar
+PRODUCT_NAME := lineage_sofiap
+PRODUCT_DEVICE := sofiap
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_MODEL := moto g8 power
+PRODUCT_MODEL := moto g pro
 
-TARGET_DEVICE := Moto G8 Power
-PRODUCT_SYSTEM_NAME := Moto G8 Power
+TARGET_DEVICE := Moto G Pro
+PRODUCT_SYSTEM_NAME := Moto G Pro
 
 VENDOR_RELEASE := 10/QPE30.79-25/59f4f:user/release-keys
-BUILD_FINGERPRINT := motorola/sofiar_retail/sofiar:$(VENDOR_RELEASE)
+BUILD_FINGERPRINT := motorola/sofiap_retail/sofiap:$(VENDOR_RELEASE)
 
 PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-12-01
 

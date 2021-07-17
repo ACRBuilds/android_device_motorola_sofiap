@@ -18,12 +18,12 @@
 # device-specific aspects (drivers) with a device-agnostic
 # product configuration (apps).
 #
-DEVICE_PATH := device/motorola/sofiar
+DEVICE_PATH := device/motorola/sofiap
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RECOVERY := false
 
-TARGET_OTA_ASSERT_DEVICE := sofiar
+TARGET_OTA_ASSERT_DEVICE := sofiap
 
 TARGET_BOOTLOADER_BOARD_NAME := trinket
 TARGET_BOARD_PLATFORM := trinket

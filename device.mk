@@ -25,12 +25,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/motorola/sofiar/prebuilt/product,product) \
-    $(call find-copy-subdir-files,*,device/motorola/sofiar/prebuilt/root,recovery/root) \
-    $(call find-copy-subdir-files,*,device/motorola/sofiar/prebuilt/permissions,product/etc/permissions) \
-    $(call find-copy-subdir-files,*,device/motorola/sofiar/prebuilt/system,system) \
-    $(call find-copy-subdir-files,*,device/motorola/sofiar/prebuilt/permissions,system/etc/permissions) \
-    $(call find-copy-subdir-files,*,device/motorola/sofiar/prebuilt/ramdisk,ramdisk)
+    $(call find-copy-subdir-files,*,device/motorola/sofiap/prebuilt/product,product) \
+    $(call find-copy-subdir-files,*,device/motorola/sofiap/prebuilt/root,recovery/root) \
+    $(call find-copy-subdir-files,*,device/motorola/sofiap/prebuilt/permissions,product/etc/permissions) \
+    $(call find-copy-subdir-files,*,device/motorola/sofiap/prebuilt/system,system) \
+    $(call find-copy-subdir-files,*,device/motorola/sofiap/prebuilt/permissions,system/etc/permissions) \
+    $(call find-copy-subdir-files,*,device/motorola/sofiap/prebuilt/ramdisk,ramdisk)
 
 AB_OTA_PARTITIONS += \
     boot \
@@ -189,7 +189,7 @@ PRODUCT_BOOT_JARS += \
 
 # Video seccomp policy files
 PRODUCT_COPY_FILES += \
-    device/motorola/sofiar/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT)/etc/seccomp_policy/codec2.software.ext.policy
+    device/motorola/sofiap/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT)/etc/seccomp_policy/codec2.software.ext.policy
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -205,8 +205,8 @@ PRODUCT_SYSTEM_SERVER_JARS += \
 # does not exist as they are mutually exclusive.  Once all target's android_filesystem_config.h
 # have been removed, TARGET_FS_CONFIG_GEN should be made unconditional.
 DEVICE_CONFIG_DIR := $(dir $(firstword $(subst ]],, $(word 2, $(subst [[, ,$(_node_import_context))))))
-ifeq ($(wildcard device/motorola/sofiar/android_filesystem_config.h),)
-  TARGET_FS_CONFIG_GEN := device/motorola/sofiar/config.fs
+ifeq ($(wildcard device/motorola/sofiap/android_filesystem_config.h),)
+  TARGET_FS_CONFIG_GEN := device/motorola/sofiap/config.fs
 else
   $(warning **********)
   $(warning TODO: Need to replace legacy $(DEVICE_CONFIG_DIR)android_filesystem_config.h with config.fs)
