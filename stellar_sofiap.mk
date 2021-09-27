@@ -19,6 +19,16 @@
 # product configuration (apps).
 #
 
+SHIPPING_WITH_LAWNCHAIR := true
+
+SHIPPING_WITH_GSANS := true
+
+STELLAR_BUILD_TYPE := gapps
+
+TARGET_GAPPS_ARCH := arm64
+
+
+
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 VENDOR_EXCEPTION_PATHS := stellar \
