@@ -19,7 +19,7 @@
 # product configuration (apps).
 #
 
-PRODUCT_EXTRA_VNDK_VERSIONS := 29
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
 VENDOR_EXCEPTION_PATHS := lineage \
     motorola \
@@ -63,7 +63,7 @@ DEVICE_PACKAGE_OVERLAYS += device/motorola/sofiap/overlay/device
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/motorola/sofiap/device.mk)
 
-PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := lineage_sofiap
